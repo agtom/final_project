@@ -32,6 +32,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 		end
 		# ensure renders show template
 		assert_template 'users/show'
+		assert is_logged_in?
 	end
 	
 end

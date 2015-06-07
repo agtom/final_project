@@ -12,8 +12,9 @@ class UsersController < ApplicationController
   	# create a method that gives user_params to avoid forbidden attributes errors
   	@user = User.new(user_params)
   	if @user.save
+      log_in @user
       # flash tells rails that data should only persist for one request
-      flash[:success] = "Welcome to the sample app"
+      flash[:success] = "Welcome to iLostProperty"
       # convention is to re-direct on successful signup (rather than render a create template)
       #  rails infers @user is user_url(@user)
   		redirect_to @user
