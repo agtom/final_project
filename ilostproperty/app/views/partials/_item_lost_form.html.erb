@@ -1,0 +1,23 @@
+
+<br>
+<div id="lostItemForm" style="text-align: left;">
+
+<%= form_for(@new_item) do |f| %>
+  <% if @item %>
+	<%= render 'shared/item_error_messages' %>
+  <% end %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name, class: 'form-control' %>
+
+	<%= f.label :location_lost %>
+	<%= f.text_field :location_lost, class: 'form-control' %>
+
+	<%= f.label :reward %>
+	<%= f.text_field :reward, class: 'form-control' %>
+
+	<%= f.submit "Add lost item", class: "btn btn-primary" %>
+<% end %>
+
+</div>
+<br>

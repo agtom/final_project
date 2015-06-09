@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   	if user && user.authenticate(params[:session][:password])
   		log_in user
   		# no need to use an instance variable as we are not rendering a form
-  		redirect_to user
+  		redirect_to root_url
   	else
   		# use flash.now when rendering a page rather than redirecting
 		flash.now[:danger] = "invalid email/password combo"

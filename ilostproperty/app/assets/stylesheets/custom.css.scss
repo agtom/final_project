@@ -3,6 +3,8 @@
 
 /* mixins, variables */
 
+$pastel-blue: #779ECB;
+
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
@@ -18,6 +20,7 @@ html{
 }
 
 body {
+  background-color: $pastel-blue;
   padding-top: 60px;
 }
 
@@ -44,18 +47,20 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-h2 {
+h5 {
   font-size: 1.2em;
-  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: $gray-light;
+}
+
+h3 {
+  padding-top: 5px;
 }
 
 p {
@@ -63,19 +68,35 @@ p {
   line-height: 1.7em;
 }
 
+
+.signup{
+  height: 10%;
+}
+
 /* header */
+
+.navbar-right {
+  font-color: black;
+ }
+
+.navbar {
+  background-color: lightblue;
+}
+
+.nav {
+  margin-top: 5px;
+}
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-  &hover {
-  color: white;
+  &:hover {
+  color: $pastel-blue;
   text-decoration: none;
   }
 }
@@ -87,72 +108,25 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  border-top: 2px solid $gray-medium-light;
   color: $gray-light;
   a {
+    float: left;
     color: $gray;
     &:hover {
-      color: $gray-darker;
+      color: white;
+      text-decoration: none;
     }
-  }
-  small {
-    float: left;
   }
   ul {
     float: right;
     list-style: none;
     li {
       float: left;
-      margin-left: 15px;
+      margin-left: 20px;
+      text-decoration: none;
     }
   }
-}
-
-/* miscellaneous */
-
-.debug_dump {
-  clear:both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
-/* sidebar */
-
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
 }
 
 /* forms */
@@ -183,4 +157,76 @@ input {
   }
 }
 
+.gravatar {
+  height: 80px;
+  width: 80px;
+}
+
+.gravatar-container {
+  margin-bottom: 10px;
+}
+
+.about-user{
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.button-container {
+  # width: 100%;
+  text-align: center;
+  # display: inline-block;
+  margin-bottom:10px;
+}
+
+
+#new_lost_item {
+  # float: left;
+  # width: 48%;
+  padding-top: 5px;
+  height: 80px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: lightblue;
+  &:hover {
+  background-color: $pastel-blue;
+  color: white;
+  }
+}
+
+#new_found_item {
+  # float: right;
+  # width: 48%;
+  padding-top: 5px;
+  height: 80px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: lightblue;
+  &:hover {
+  background-color: $pastel-blue;
+  color: white;
+  }
+}
+
+#item_lost_form{
+  display: none;
+}
+
+#item_found_form{
+  display: none;
+}
+
+.lostItemTable{
+}
+
+th {
+  text-align: center;
+}
+
+tr {
+ text-align: center; 
+}
+
+.mapsLostItems{
+  margin-bottom: 40px;
+}
 

@@ -1,0 +1,24 @@
+
+<div class="lostItemTable panel panel-default">
+	<div class="panel-heading" style="text-align: center;">
+		<h4>Lost Item(s)</h4>
+	</div>
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+			<th>Reward</th>
+		</tr>
+
+		<% @items.each do |item| %>
+		<tr>
+			<td><%= link_to item.name, user_item_path(user_id: @user.id, id: item.id) %></td>
+			<td><%= item.location_lost %></td>
+			<td><%= item.reward %></td>
+		</tr>
+		<% end %>
+</table>
+</div>
+
+
+

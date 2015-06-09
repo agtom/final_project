@@ -1,0 +1,25 @@
+<% provide(:title, 'Register lost property') %>
+<div class="jumbotron">
+	<h1>Register item</h1>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+		<!-- @user here is a user class -->
+		<%= form_for(@item) do |f| %>
+
+		<!-- partial for error messages in shared directory as will be used with microposts -->
+		<%= render 'shared/item_error_messages' %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name, class: 'form-control' %>
+
+			<%= f.label :location_lost %>
+			<%= f.text_field :location_lost, class: 'form-control' %>
+
+			<%= f.label :reward %>
+			<%= f.text_field :reward, class: 'form-control' %>
+
+			<%= f.submit "Register lost property", class: "btn btn-primary" %>
+		<% end %>
+		</div>
+	</div>
+</div>

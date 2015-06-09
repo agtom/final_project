@@ -1,0 +1,12 @@
+<% provide(:title, @item.name) %>
+
+<div class="center jumbotron">
+	<h3><%= @user.name %></h3>
+	
+	<%= @item.name %>
+	<%= @item.location_lost %>
+	<%= link_to "Edit", edit_user_item_path(user_id: @user.id, id: @item.id) %>
+	<%= link_to "Delete", user_item_path(user_id: @user.id, id: @item.id), method: :delete, data: {confirm: "Are you sure?"} %>
+	
+</div>
+

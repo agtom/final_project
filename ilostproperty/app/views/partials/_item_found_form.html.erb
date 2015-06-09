@@ -1,0 +1,21 @@
+<div id="lostItemForm">
+<%= form_for(@new_item) do |f| %>
+
+<!-- partial for error messages in shared directory as will be used with microposts -->
+	<%= render 'shared/item_error_messages' %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name, class: 'form-control' %>
+
+	<%= f.label :location_lost %>
+	<%= f.text_field :location_lost, class: 'form-control' %>
+
+	<%= f.label :reward %>
+	<%= f.text_field :reward, class: 'form-control' %>
+
+	<%= f.label :password_confirmation %>
+	<%= f.password_field :password_confirmation, class: 'form-control' %>
+
+	<%= f.submit "Add lost item", class: "btn btn-primary" %>
+<% end %>
+</div>

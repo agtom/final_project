@@ -1,11 +1,20 @@
 class UsersController < ApplicationController
   
-  def show
-  	@user = User.find(params[:id])
+  def new
+    @user = User.new
+    @item = @user.items.new
   end
 
-  def new
-  	@user = User.new
+  def show
+  	@user = User.find(params[:id])
+    @items = @user.items
+    @new_item = Item.new
+    @item = Item.new
+
+    @hash = Gmaps4rails.build_markers(@items) do |item, marker|
+      marker.lat item.latitude
+      marker.lng item.longitude
+    end
   end
 
   def create
@@ -30,7 +39,7 @@ class UsersController < ApplicationController
 	def user_params
 		# params hash must have user key
 		# because the form contains a user class, rails knows to create a hash with symbol user
-		params.require(:user).permit(:name, :email, :password, :password_confirmation)
+		params.require(:user).permit(:name, :email, :location, :password, :password_confirmation)
 	end
 
 end

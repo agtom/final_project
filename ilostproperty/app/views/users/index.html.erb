@@ -1,3 +1,4 @@
+
 <% provide(:title, @user.name) %>
 <div class="jumbotron">
 
@@ -11,27 +12,30 @@
 			</div>
 		</div>
 		<div class="col-md-4 button-container">
-			<div id="new_lost_item">
-				<h3>Lost property?</h3>
-			</div>
+			<div id="new_lost_item"><h3>Lost property?</h3></div>
 			<div id="item_lost_form">
-    			<%= render "partials/item_lost_form" %>
-		   </div>
+    	<%= render "partials/item_lost_form" %>
+   </div>
 		</div>
 		<div class="col-md-4 button-container">
-			<div id="new_found_item">
-				<h3>Found property?</h3>
-			</div>
+			<div id="new_found_item"><h3>Found property?</h3></div>
 		</div>
 	</div>
 </div>
 <br>
 
  <% if @user.items.any? %>
-     <%= render "partials/item_lost_list" %>
-   	<%= render "partials/item_lost_map" %>
+      <%= render "partials/item_lost_list" %>
+   		<%= render "partials/item_lost_map" %>
   <%end%>
 
+<% 
+=begin %>
+   	<div id="item_found_form">
+    	<%= render "partials/item_found_form" %>
+   </div>
+<% 
+=end %>
 
 </div>
 

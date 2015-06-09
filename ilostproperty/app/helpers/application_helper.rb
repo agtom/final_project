@@ -3,7 +3,7 @@ module ApplicationHelper
 	# Returns full title on a per-page basis
 	# page_title = '' gives page_title a default value of an empty string
 	def full_title(page_title = '')
-		base_title = "Sample App"
+		base_title = "iLostProperty"
 		if page_title.empty?
 			base_title
 		else
