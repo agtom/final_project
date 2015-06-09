@@ -1,12 +1,30 @@
 <% provide(:title, @item.name) %>
 
 <div class="center jumbotron">
-	<h3><%= @user.name %></h3>
-	
-	<%= @item.name %>
-	<%= @item.location_lost %>
-	<%= link_to "Edit", edit_user_item_path(user_id: @user.id, id: @item.id) %>
-	<%= link_to "Delete", user_item_path(user_id: @user.id, id: @item.id), method: :delete, data: {confirm: "Are you sure?"} %>
-	
+	<div class="lostItemTable panel panel-default">
+		<div class="panel-heading" style="text-align: center;">
+		<h3>Lost Item(s)</h3>
+		</div>
+		<table class="table">
+			<tr>
+				<th>Name</th>
+				<th>Location</th>
+				<th>Reward</th>
+			</tr>
+			<tr>
+				<td><%= @item.name %></td>
+				<td><%= @item.location_lost %></td>
+				<td><%= @item.reward %></td>
+			</tr>
+		</table>
+	</div>
+	<br>
+
+<div class="show_buttons">
+		<h3 id="edit_button"><%= link_to "Edit", edit_user_item_path(user_id: @user.id, id: @item.id), class: "btn btn-lg btn-primary" %></h3>
+
+		<h3 id="delete_button"><%= link_to "Delete", user_item_path(user_id: @user.id, id: @item.id), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-lg btn-primary" %></h3>
+</div>
+
 </div>
 

@@ -207,6 +207,22 @@ input {
   }
 }
 
+.show_buttons {
+  display: inline-block;
+  text-align: center;
+}
+
+#edit_button {
+float:left;
+margin-right: 50px;
+}
+
+#delete_button {
+float: right;
+margin-left: 50px;
+}
+
+
 #item_lost_form{
   display: none;
 }

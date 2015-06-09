@@ -9,13 +9,13 @@
 		<!-- partial for error messages in shared directory as will be used with microposts -->
 		<%= render 'shared/item_error_messages' %>
 
-			<%= f.label :name %>
+			<%= f.label :item_name %>
 			<%= f.text_field :name, class: 'form-control' %>
 
 			<%= f.label :location_lost %>
 			<%= f.text_field :location_lost, class: 'form-control' %>
 
-			<%= f.label :reward %>
+			<%= f.label :reward_in_dollars %>
 			<%= f.text_field :reward, class: 'form-control' %>
 
 			<%= f.submit "Register lost property", class: "btn btn-primary" %>

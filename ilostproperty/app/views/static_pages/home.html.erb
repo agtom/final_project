@@ -3,14 +3,14 @@
 
 <div class="center jumbotron">
 	<h1 style="margin-top: 0px; margin-bottom: 40px; color: #779ECB">iLostProperty</h1>
-		<h5>iLostProperty is a community where people have lost items can connect with people who have found items.</h5>
+	<h5>iLostProperty is a community where people have lost items can connect with people who have found items.</h5>
 	<br>
 	<% if !logged_in? %>
 	<%= link_to 'Sign Up', signup_path, class: "btn btn-lg btn-primary" %>
 	<% end %>
 
 	<% if logged_in? %>
-	<%= link_to 'Find your lost property', user_items_path(@user), class: "btn btn-lg btn-primary" %>
+	<%= link_to 'Find your lost property', user_path(@user), class: "btn btn-lg btn-primary" %>
 	<% end %>
 
 </div>

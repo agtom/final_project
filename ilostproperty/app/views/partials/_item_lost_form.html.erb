@@ -7,14 +7,14 @@
 	<%= render 'shared/item_error_messages' %>
   <% end %>
 
-	<%= f.label :name %>
+	<%= f.label :Item_name %>
 	<%= f.text_field :name, class: 'form-control' %>
 
 	<%= f.label :location_lost %>
-	<%= f.text_field :location_lost, class: 'form-control' %>
+	<%= f.text_field :location_lost, class: 'form-control', placeholder: 'e.g. Union Square, NY' %>
 
-	<%= f.label :reward %>
-	<%= f.text_field :reward, class: 'form-control' %>
+	<%= f.label :reward_in_dollars %>
+	<%= f.text_field :reward, class: 'form-control', placeholder: 'e.g. 20 (minimum)' %>
 
 	<%= f.submit "Add lost item", class: "btn btn-primary" %>
 <% end %>

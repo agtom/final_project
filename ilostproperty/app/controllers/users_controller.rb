@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     @items = @user.items
     @new_item = Item.new
-    @item = Item.new
+    #@item = Item.new
 
     @hash = Gmaps4rails.build_markers(@items) do |item, marker|
       marker.lat item.latitude
